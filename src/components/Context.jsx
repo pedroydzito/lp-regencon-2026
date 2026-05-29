@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe } from 'lucide-react';
+import { Globe, ArrowRight } from 'lucide-react';
 
 export default function Context() {
   return (
@@ -71,22 +71,44 @@ export default function Context() {
         <div className="glass card-hover" style={{ 
           padding: '4rem 3rem', 
           borderRadius: '2px', 
-          textAlign: 'center', 
           background: 'rgba(15, 18, 18, 0.85)', 
           backdropFilter: 'blur(10px)', 
           border: '1px solid var(--border-medium)' 
         }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '2.5rem' }}>
               <Globe size={18} color="var(--color-primary)" />
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: 0, color: 'var(--text-main)' }}>Brasil</h3>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: 0, color: 'var(--text-main)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Brasil</h3>
             </div>
-            <h3 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', marginBottom: '1.5rem', fontWeight: 400, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text-main)' }}>
-              O maior mercado da região está apenas <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>começando</span>.
-            </h3>
-            <p className="text-muted leading-relaxed" style={{ fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto', fontWeight: 300 }}>
-              A falta de marcos regulatórios unificados e a escassez de educação formal mantêm nosso país refém de tecnologias importadas, enquanto o mundo já obsoleta técnicas tradicionais e avança rapidamente.
-            </p>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left', color: 'var(--text-secondary)', fontSize: '1.1rem', fontWeight: 300, lineHeight: 1.6 }}>
+              <p>
+                <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>A medicina regenerativa deixou de ser promessa.</strong><br />
+                Ela já <u style={{ color: 'var(--text-main)', textDecorationColor: 'var(--color-primary)' }}>movimenta pacientes, capital, oferta clínica e reposicionamento médico</u> na nossa região.
+              </p>
+
+              <p style={{ fontSize: '1.25rem', color: 'var(--text-main)', fontWeight: 400, margin: '0.5rem 0', lineHeight: 1.4 }}>
+                Você se sente preparado para que o Brasil seja o próximo polo da medicina regenerativa nas Américas?
+              </p>
+
+              <p>
+                A <u style={{ color: 'var(--text-main)', textDecorationColor: 'var(--color-primary)' }}>medicina brasileira</u> sempre foi <u style={{ color: 'var(--text-main)', textDecorationColor: 'var(--color-primary)' }}>referência internacional</u>. Agora, chegou o <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>momento de formar a elite da medicina regenerativa</strong> e fazer do <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>Brasil um destino seguro para tratamentos regenerativos</strong>.
+              </p>
+
+              <p>
+                No <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>REGENCON</strong>, <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>pela primeira vez no Brasil</strong>, você terá acesso direto a quem escreve protocolos, conduz pesquisa e traduz a fronteira científica em prática clínica e direção de mercado, com nomes ligados a <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>Stanford, Duke, FMUSP, InCor e ANVISA</strong>.
+              </p>
+
+              <p>
+                Um <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>movimento necessário</strong> no <strong style={{ color: 'var(--text-main)', fontWeight: 500 }}>momento mais oportuno da medicina moderna</strong>.
+              </p>
+            </div>
+
+            <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
+              <button className="btn-cta" style={{ textTransform: 'none' }}>
+                Garantir a minha participação <ArrowRight size={18} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
