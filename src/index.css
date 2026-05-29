@@ -270,6 +270,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.final-cta-card {
+  padding: 3.5rem;
+}
+
 /* Lenis smooth scrolling base CSS */
 html.lenis, html.lenis body {
   height: auto;
@@ -319,11 +323,11 @@ html.lenis, html.lenis body {
   .mobile-text { display: inline !important; }
 
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1.25rem !important;
   }
 
   .section {
-    padding: 4rem 0;
+    padding: 3.5rem 0 !important;
   }
 
   body {
@@ -357,44 +361,67 @@ html.lenis, html.lenis body {
   .btn-primary, 
   .btn-cta, 
   .btn-secondary {
-    padding: 0.85rem 1.25rem !important;
-    font-size: 0.85rem;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.85rem !important;
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.02em !important;
     white-space: normal !important;
+    line-height: 1.2;
+    text-align: center;
   }
 
   /* Adjust Institutional Bar logos */
   .institutional-logos {
-    gap: 1rem !important;
-    justify-content: center !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem 1rem !important;
+    justify-items: center !important;
+    align-items: center !important;
   }
   
   .institutional-logos img {
-    max-width: 75px !important;
+    max-width: 65px !important;
     height: auto !important;
+  }
+
+  /* Benefits logos */
+  .benefits-logos {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem 1rem !important;
+    justify-items: center !important;
+    align-items: center !important;
+    margin-bottom: 3rem !important;
+  }
+  
+  .benefits-logos img {
+    max-width: 65px !important;
+    height: auto !important;
+  }
+
+  .final-cta-card {
+    padding: 2rem 1.25rem !important;
   }
 
   /* Specific hero fixes */
   .hero-section {
-    padding-top: 1rem !important;
-    padding-bottom: 1.5rem !important;
+    padding: 3.5rem 0 !important;
     min-height: auto !important;
   }
 
   .hero-logo {
     height: 30px !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .hero-info-bar {
     flex-direction: row;
     justify-content: center;
-    gap: 0.5rem !important;
+    gap: 0.25rem !important;
     align-items: center;
-    margin-bottom: 1rem !important;
+    margin-bottom: 2.25rem !important;
     flex-wrap: nowrap;
   }
   
@@ -403,22 +430,35 @@ html.lenis, html.lenis body {
     white-space: nowrap;
   }
   
-  .hero-elite-text,
   .hero-subtitle {
     font-size: 0.95rem !important;
+    margin-bottom: 1rem !important;
   }
 
-  /* Reduce global spacing further */
-  .section {
-    padding: 3rem 0;
+  .hero-elite-text {
+    font-size: 0.75rem !important;
+    margin-bottom: 0 !important;
   }
 
+  /* Editorial Section */
+  .section-editorial {
+    padding: 0 !important;
+  }
+
+  .editorial-content {
+    padding: 3.5rem 1.25rem !important;
+  }
 
   /* Speaker Cards */
   .speaker-card {
     width: 280px !important;
     padding: 1.5rem !important;
     margin: 0 auto !important;
+  }
+
+  /* Benefits Grid */
+  .benefits-grid {
+    margin-bottom: 2.5rem !important;
   }
 
   /* Pricing Cards */

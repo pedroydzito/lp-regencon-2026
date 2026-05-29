@@ -22,7 +22,7 @@ export default function FinalCTA() {
             base científica séria, tradução clínica, regulação, direção de mercado e conexão com quem já ocupa a fronteira da medicina regenerativa.
           </p>
 
-          <div className="glass card-hover" style={{ padding: '3.5rem', borderRadius: '2px', marginBottom: '2rem', border: '1px solid var(--border-medium)', background: 'rgb(13 20 35)' }}>
+          <div className="glass card-hover final-cta-card" style={{ borderRadius: '2px', marginBottom: '2rem', border: '1px solid var(--border-medium)', background: 'rgb(13 20 35)' }}>
             <p style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: '1rem', color: 'var(--text-main)' }}>
               A próxima grande distinção da prática médica já está em andamento.
             </p>
@@ -61,7 +61,7 @@ export default function FinalCTA() {
               ))}
             </div>
 
-            <button className="btn-cta" style={{ display: 'inline-flex', fontSize: '1.05rem' }}>
+            <button className="btn-cta">
               Quero garantir meu lugar <ArrowRight size={18} />
             </button>
           </div>

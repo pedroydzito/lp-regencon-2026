@@ -33,13 +33,13 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="ingressos" className="section" style={{ position: 'relative', background: '#0a0b0b' }}>
+    <section id="ingressos" className="section" style={{ position: 'relative', background: 'var(--bg-card-dark)' }}>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>Último Lote</div>
           <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', fontWeight: 400 }}>
-            Faça parte da <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>elite</span> da medicina regenerativa
+            Faça parte da <span style={{ fontStyle: 'italic', color: 'var(--color-cta)' }}>elite</span> da medicina regenerativa
           </h2>
           <p className="text-muted leading-relaxed" style={{ fontSize: '1.05rem' }}>Ingressos por categoria</p>
         </div>
@@ -52,12 +52,12 @@ export default function Pricing() {
               position: 'relative',
               transform: plan.highlight ? 'translateY(-10px)' : 'translateY(0)',
               border: plan.highlight ? '1px solid var(--text-main)' : '1px solid var(--border-medium)',
-              background: plan.highlight ? 'var(--bg-surface)' : '#0a0b0b',
+              background: plan.highlight ? 'var(--bg-card-dark)' : 'var(--bg-card-dark)',
               zIndex: plan.highlight ? 10 : 1,
               opacity: plan.soldOut ? 0.6 : 1,
             }}>
               {plan.highlight && (
-                <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'var(--bg-base)', padding: '0.2rem 1.2rem', fontSize: '1.05rem', fontWeight: 600, letterSpacing: '0.05em', color: 'var(--text-main)', border: '1px solid var(--text-main)' }}>
+                <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'var(--bg-base)', padding: '0.2rem 1.2rem', fontSize: '1.05rem', fontWeight: 600, letterSpacing: '0.05em', color: 'var(--color-cta)', border: '1px solid var(--color-cta)' }}>
                   RECOMENDADO
                 </div>
               )}
@@ -95,7 +95,7 @@ export default function Pricing() {
                   Esgotado
                 </button>
               ) : (
-                <button className="btn-cta" style={{ width: '100%', justifyContent: 'center' }}>
+                <button className="btn-cta">
                   Garantir vaga <ArrowRight size={16} />
                 </button>
               )}

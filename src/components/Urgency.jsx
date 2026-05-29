@@ -7,7 +7,7 @@ export default function Urgency() {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '850px', margin: '0 auto 4rem' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>O Momento é Agora</div>
-          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', fontWeight: 400 }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', fontWeight: 400, fontFamily: "'Archivo', sans-serif" }}>
             A medicina mudou. Em pouco tempo, a atualização em medicina regenerativa <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>deixará de ser opção</span>
           </h2>
           <p className="text-muted leading-relaxed" style={{ fontSize: '1.05rem' }}>

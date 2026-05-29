@@ -150,7 +150,7 @@ export default function Hero() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Calendar size={16} color="var(--color-primary)" />
-              <span>25 e 26 de setembro de 2026</span>
+              <span>25 e 26 de <span className="desktop-text">setembro</span><span className="mobile-text">set.</span> de 2026</span>
             </div>
           </div>
 

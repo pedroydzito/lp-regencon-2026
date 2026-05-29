@@ -88,7 +88,7 @@ export default function Benefits() {
           </div>
 
           {/* Logos */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', marginBottom: '5rem' }}>
+          <div className="benefits-logos" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', marginBottom: '5rem' }}>
             {[
               { src: "/Instituições/LOGO_USP.png", alt: "USP", height: '32px' },
               { src: "/Instituições/LOGO_STANFORD.png", alt: "Stanford", height: '28px' },
@@ -173,7 +173,7 @@ export default function Benefits() {
             <p style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: '3rem' }}>
               O REGENCON é o lugar onde se forma a <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>elite da medicina regenerativa</span>.
             </p>
-            <button className="btn-cta" style={{ display: 'inline-flex' }}>
+            <button className="btn-cta">
               Garantir a minha participação <ArrowRight size={18} />
             </button>
           </div>
