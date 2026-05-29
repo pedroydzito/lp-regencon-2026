@@ -1,0 +1,196 @@
+import React from 'react';
+import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+
+export default function Hero() {
+  return (
+    <>
+      <style>{`
+        .hero-section {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+          position: relative;
+          overflow: hidden;
+          background: var(--bg-deeper);
+        }
+        .hero-bg {
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(ellipse 100% 100% at 50% 50%, rgba(143, 185, 200, 0.08) 0%, rgba(143, 185, 200, 0.02) 50%, transparent 100%),
+            var(--bg-deeper);
+          z-index: 0;
+        }
+        .hero-grain {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          opacity: 0.15;
+          mix-blend-mode: overlay;
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.8'/></svg>");
+          z-index: 2;
+        }
+        .hero-waves {
+          position: absolute;
+          inset: auto -10vw -10vh -10vw;
+          height: 100vh;
+          z-index: 1;
+          pointer-events: none;
+          opacity: 0.3;
+          mix-blend-mode: screen;
+          mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 70%, transparent 100%);
+          -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 70%, transparent 100%);
+        }
+        .wave-line {
+          position: absolute;
+          width: 200vw;
+          height: 100%;
+          background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M0,0 C300,100 900,-100 1200,0 L1200,120 L0,120 Z' fill='none' stroke='rgba(143,185,200,0.4)' stroke-width='2'/></svg>");
+          background-size: 100vw 100%;
+          background-repeat: repeat-x;
+        }
+        .wave-1 {
+          bottom: 0;
+          animation: waveMove 30s linear infinite;
+        }
+        .wave-2 {
+          bottom: 20px;
+          opacity: 1;
+          animation: waveMove 40s linear infinite reverse;
+          background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M0,40 C400,-60 800,140 1200,40 L1200,120 L0,120 Z' fill='none' stroke='rgba(143,185,200,0.5)' stroke-width='1.5'/></svg>");
+        }
+        .wave-3 {
+          bottom: 40px;
+          opacity: 0.8;
+          animation: waveMove 50s linear infinite;
+          background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M0,80 C500,180 700,-80 1200,80 L1200,120 L0,120 Z' fill='none' stroke='rgba(143,185,200,0.3)' stroke-width='3'/></svg>");
+        }
+        @keyframes waveMove {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100vw); }
+        }
+
+        .section-editorial {
+          position: relative;
+          background: var(--bg-deeper);
+          border-top: 1px solid var(--border-subtle);
+          border-bottom: 1px solid var(--border-subtle);
+          overflow: hidden;
+        }
+        .editorial-frame {
+          position: relative;
+          min-height: 70vh;
+          display: flex;
+          align-items: center;
+        }
+        .editorial-frame::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: url('https://placehold.co/1920x1080/181B1B/6B7475?text=Medicina+Regenerativa');
+          background-size: cover;
+          background-position: center;
+          filter: grayscale(0.5) brightness(0.7);
+          z-index: 0;
+        }
+        .editorial-frame::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(90deg, rgba(5,6,6,0.95) 0%, rgba(5,6,6,0.8) 40%, rgba(5,6,6,0.2) 70%, transparent 100%),
+            linear-gradient(to bottom, rgba(5,6,6,0.3) 0%, transparent 40%, rgba(5,6,6,0.8) 100%);
+          z-index: 1;
+        }
+        .editorial-content {
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 4rem 2rem;
+        }
+        .editorial-text {
+          max-width: 550px;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+      
+      <section className="hero-section">
+        <div className="hero-bg"></div>
+        <div className="hero-waves">
+          <div className="wave-line wave-1"></div>
+          <div className="wave-line wave-2"></div>
+          <div className="wave-line wave-3"></div>
+        </div>
+        <div className="hero-grain"></div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1000px' }}>
+          <img src="/Regencon.svg" alt="REGENCON Logo" className="hero-logo" style={{ height: '60px', margin: '0 auto 2rem', opacity: 0.9 }} />
+
+          <h1 className="text-balance" style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', marginBottom: '1.5rem', fontWeight: 400, lineHeight: 1.05 }}>
+            Moldando o futuro da <span className="gradient-text">longevidade</span> e da medicina regenerativa
+          </h1>
+
+          <p className="hero-subtitle text-muted leading-relaxed text-balance" style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
+            Atualize-se em medicina regenerativa com segurança. Da ciência à prática clínica e de mercado, com autoridades de instituições globais.
+          </p>
+
+          <div className="hero-info-bar" style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', marginBottom: '3rem', fontSize: '1.1rem', color: '#ffffff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MapPin size={16} color="var(--color-primary)" />
+              <span>São Paulo</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Calendar size={16} color="var(--color-primary)" />
+              <span>25 e 26 de setembro de 2026</span>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+            <button className="btn-cta">
+              GARANTIR A MINHA PARTICIPAÇÃO <ArrowRight size={18} />
+            </button>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                {["/Palestrantes/Kalil.png", "/Palestrantes/Juliano.png", "/Palestrantes/Claudia Medeiros.jpeg"].map((src, i) => (
+                  <img key={i} src={src} alt="Idealizador" style={{ width: '36px', height: '36px', borderRadius: '50%', border: '1.5px solid var(--bg-base)', objectFit: 'cover', zIndex: 3-i, position: 'relative', marginLeft: i > 0 ? '-12px' : '0' }} />
+                ))}
+              </div>
+              <p className="hero-elite-text" style={{ fontSize: '1.1rem', color: '#A8AAA7', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                Junte-se à elite da medicina
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-editorial">
+        <div className="editorial-frame">
+          <div className="editorial-content">
+            <div className="editorial-text">
+              <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Inovação com legitimidade</div>
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '1.5rem', fontWeight: 400, lineHeight: 1.1 }}>
+                A Nova Economia da Medicina
+              </h2>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                A medicina regenerativa e a longevidade representam uma transformação profunda na forma como entendemos e tratamos o envelhecimento e as doenças crônicas.
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.7 }}>
+                Junte-se a pesquisadores de Stanford, Duke e USP para dominar as terapias celulares, exossomos e engenharia de tecidos, traduzindo ciência de fronteira em prática clínica de alto valor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
