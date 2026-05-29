@@ -41,7 +41,7 @@ export default function Context() {
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: 0, color: 'var(--text-main)' }}>México</h3>
               </div>
               <p className="text-muted leading-relaxed" style={{ fontSize: '1.05rem' }}>
-                A <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>R3 Stem Cell</strong> atua fortemente na América Latina e possui mais de <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>80 clínicas</strong>. O <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>Dr. Adeel Khan</strong>, um nome proeminente, recebe celebridades internacionais para tratamento.
+                No <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>México</strong>, a medicina regenerativa já opera em <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>escala internacional</strong>. A R3 Stem Cell atua fortemente na América Latina e possui mais de 80 clínicas, com mais de <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>28.000 procedimentos realizados</strong> em 8 países na última década, atraindo pacientes de diferentes partes do mundo para a <strong style={{ color: 'var(--text-main)', fontWeight: 400 }}>jornada internacional de tratamentos regenerativos</strong>.
               </p>
             </div>
           </div>
