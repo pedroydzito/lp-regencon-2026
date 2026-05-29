@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 const speakers = [
   { name: "Prof. Dr. Jorge Kalil", creds: "MD, PhD, DrHC, FRCP (Lond.)", affil: "FMUSP e InCor", bio: "Professor Titular e Diretor do Serviço de Imunologia Clínica e Alergia do HC-FMUSP, Diretor do Laboratório de Imunologia do InCor e da Unidade de Terapia Celular do HC. +800 artigos publicados.", tema: "Perspectivas futuras em medicina regenerativa", img: "/Kalil.png" },
@@ -28,29 +28,59 @@ const speakers = [
 ];
 
 export default function Speakers() {
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    let animationId;
+    let lastTime;
+    const speed = 0.06; // pixels per ms
+    const scrollContainer = scrollRef.current;
+    
+    const scroll = (time) => {
+      if (scrollContainer && !isPaused) {
+        if (lastTime != null) {
+          const delta = time - lastTime;
+          scrollContainer.scrollLeft += speed * delta;
+          
+          // Loop back to start seamlessly
+          // The math works perfectly because of the 2rem padding-right on the track
+          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+            scrollContainer.scrollLeft -= scrollContainer.scrollWidth / 2;
+          }
+        }
+        lastTime = time;
+      } else {
+        lastTime = null;
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    animationId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused]);
+
   return (
     <>
       <style>{`
         .marquee-container {
-          overflow: hidden;
+          overflow-x: auto;
           width: 100%;
           position: relative;
           padding: 2rem 0;
           display: flex;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          -webkit-overflow-scrolling: touch;
+        }
+        .marquee-container::-webkit-scrollbar {
+          display: none;
         }
         .marquee-track {
           display: flex;
           gap: 2rem;
-          padding: 0 1rem;
-          animation: marquee 60s linear infinite;
+          padding-right: 2rem; /* Ensures the gap is consistent for the math of scrollWidth/2 */
           width: max-content;
-        }
-        .marquee-container:hover .marquee-track {
-          animation-play-state: paused;
-        }
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
         }
         .speaker-card {
           width: 450px;
@@ -61,7 +91,11 @@ export default function Speakers() {
           flex-direction: column;
           border: 1px solid var(--border-medium);
           background: rgb(13 20 35);
-          cursor: default;
+          cursor: grab;
+          transition: background 0.3s ease;
+        }
+        .speaker-card:active {
+          cursor: grabbing;
         }
         .speaker-card:hover {
           background: rgb(20 30 45);
@@ -98,7 +132,14 @@ export default function Speakers() {
         </div>
 
         <div className="full-width-breakout">
-          <div className="marquee-container">
+          <div 
+            className="marquee-container"
+            ref={scrollRef}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
             <div className="marquee-track">
               {[...speakers, ...speakers].map((s, i) => (
                 <div key={i} className="glass speaker-card card-hover">
