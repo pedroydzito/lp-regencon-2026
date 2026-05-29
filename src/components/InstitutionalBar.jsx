@@ -5,7 +5,7 @@ export default function InstitutionalBar() {
     <section style={{ padding: '2.5rem 0', background: 'rgb(13 20 35)', borderBottom: '1px solid var(--border-subtle)' }}>
       <div className="container">
         <p style={{ textAlign: 'center', fontSize: '1.05rem', color: 'var(--text-muted)', letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '2rem' }}>
-          Autoridades de instituições globais
+          Inovação com legitimidade
         </p>
         <div className="institutional-logos" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '2.5rem' }}>
           {[

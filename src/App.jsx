@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import InstitutionalBar from './components/InstitutionalBar';
+import Editorial from './components/Editorial';
 import Context from './components/Context';
 import Urgency from './components/Urgency';
 import Benefits from './components/Benefits';
@@ -21,6 +22,7 @@ function App() {
     <>
       <Hero />
       <InstitutionalBar />
+      <Editorial />
       <Context />
       <Urgency />
       <Benefits />

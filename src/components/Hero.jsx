@@ -73,54 +73,6 @@ export default function Hero() {
           0% { transform: translateX(0); }
           100% { transform: translateX(-100vw); }
         }
-
-        .section-editorial {
-          position: relative;
-          background: var(--bg-deeper);
-          border-top: 1px solid var(--border-subtle);
-          border-bottom: 1px solid var(--border-subtle);
-          overflow: hidden;
-        }
-        .editorial-frame {
-          position: relative;
-          min-height: 70vh;
-          display: flex;
-          align-items: center;
-        }
-        .editorial-frame::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background-image: url('https://placehold.co/1920x1080/181B1B/6B7475?text=Medicina+Regenerativa');
-          background-size: cover;
-          background-position: center;
-          filter: grayscale(0.5) brightness(0.7);
-          z-index: 0;
-        }
-        .editorial-frame::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background:
-            linear-gradient(90deg, rgba(5,6,6,0.95) 0%, rgba(5,6,6,0.8) 40%, rgba(5,6,6,0.2) 70%, transparent 100%),
-            linear-gradient(to bottom, rgba(5,6,6,0.3) 0%, transparent 40%, rgba(5,6,6,0.8) 100%);
-          z-index: 1;
-        }
-        .editorial-content {
-          position: relative;
-          z-index: 2;
-          width: 100%;
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 4rem 2rem;
-        }
-        .editorial-text {
-          max-width: 550px;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
       `}</style>
       
       <section className="hero-section">
@@ -167,25 +119,6 @@ export default function Hero() {
               </div>
               <p className="hero-elite-text" style={{ fontSize: '1.1rem', color: '#A8AAA7', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Junte-se à elite da medicina
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-editorial">
-        <div className="editorial-frame">
-          <div className="editorial-content">
-            <div className="editorial-text">
-              <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>Inovação com legitimidade</div>
-              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '1.5rem', fontWeight: 400, lineHeight: 1.1 }}>
-                A Nova Economia da Medicina
-              </h2>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-                A medicina regenerativa e a longevidade representam uma transformação profunda na forma como entendemos e tratamos o envelhecimento e as doenças crônicas.
-              </p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.7 }}>
-                Junte-se a pesquisadores de Stanford, Duke e USP para dominar as terapias celulares, exossomos e engenharia de tecidos, traduzindo ciência de fronteira em prática clínica de alto valor.
               </p>
             </div>
           </div>
