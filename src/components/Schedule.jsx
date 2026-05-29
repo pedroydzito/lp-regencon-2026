@@ -242,14 +242,24 @@ export default function Schedule() {
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div className="eyebrow" style={{ justifyContent: 'center' }}>Programação</div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', fontWeight: 400 }}>
-              Dias 25 e 26 de setembro de 2026
+              Dias <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>25</span> e <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>26</span> de setembro de 2026
             </h2>
-            <p className="text-muted" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+            <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.5rem', fontSize: '1.05rem', color: '#ffffff' }}>
               <MapPin size={16} /> Centro de Convenções Rebouças | São Paulo
             </p>
-            <p className="text-muted leading-relaxed" style={{ maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem' }}>
-              Dois dias imersivos para transformar a sua prática clínica. O REGENCON reúne cerca de 1.000 médicos engajados com a medicina regenerativa, a longevidade e os novos vetores de valor da prática médica.
-            </p>
+            <div className="text-muted leading-relaxed" style={{ maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem' }}>
+              <p style={{ marginBottom: '1.25rem' }}>
+                Dois dias imersivos para transformar a sua prática clínica.
+                <br />
+                O REGENCON reúne cerca de 1.000 médicos engajados com a medicina regenerativa, a longevidade e os novos vetores de valor da prática médica.
+              </p>
+              <p style={{ marginBottom: '1.25rem' }}>
+                As abordagens regenerativas já impulsionam movimentos decisivos: maior precisão, menor invasividade, novas perspectivas para doenças crônicas e degenerativas e novas possibilidades para a gestão do envelhecimento. A medicina está mudando de base. E este é o momento de posicionar o Brasil como o próximo polo da medicina regenerativa na América Latina. Prepare-se.
+              </p>
+              <p>
+                Uma programação desenhada para o médico que atua ou deseja atuar, independentemente da especialidade
+              </p>
+            </div>
           </div>
 
           {/* Day switcher */}

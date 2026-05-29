@@ -73,6 +73,34 @@ export default function Hero() {
           0% { transform: translateX(0); }
           100% { transform: translateX(-100vw); }
         }
+        .hero-subtitle-caps {
+          font-size: 1.85rem;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          white-space: nowrap;
+          font-weight: 400;
+          color: var(--text-main);
+          margin-bottom: 1.75rem;
+          line-height: 1.2;
+        }
+        @media (max-width: 768px) {
+          .hero-subtitle-caps {
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero-subtitle-caps {
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
+          }
+        }
+        @media (max-width: 360px) {
+          .hero-subtitle-caps {
+            font-size: 0.72rem;
+            letter-spacing: 0.02em;
+          }
+        }
       `}</style>
       
       <section className="hero-section">
@@ -90,8 +118,8 @@ export default function Hero() {
           <h1 className="text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '0.75rem', fontWeight: 400, lineHeight: 1.15 }}>
             Atualize-se em <span className="gradient-text">medicina regenerativa com segurança</span>.
           </h1>
-          <h2 className="text-balance" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', marginBottom: '1.75rem', fontWeight: 400, lineHeight: 1.2, color: 'var(--text-main)' }}>
-            Da ciência à prática clínica e de mercado.
+          <h2 className="hero-subtitle-caps">
+            DA CIÊNCIA À PRÁTICA CLÍNICA E DE MERCADO.
           </h2>
 
           <p className="hero-subtitle text-muted leading-relaxed text-balance" style={{ fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>

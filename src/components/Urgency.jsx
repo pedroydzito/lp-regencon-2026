@@ -11,9 +11,7 @@ export default function Urgency() {
             A medicina <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>mudou</span>.
           </h2>
           <p className="text-muted leading-relaxed" style={{ fontSize: '1.05rem', maxWidth: '750px', margin: '0 auto' }}>
-            Em pouco tempo, a atualização em medicina regenerativa deixará de ser opção e impactará todas as especialidades.
-            <br />
-            A inteligência artificial está transformando a sociedade diante dos nossos olhos.
+            Em pouco tempo, a atualização em medicina regenerativa deixará de ser opção e impactará todas as especialidades. A inteligência artificial está transformando a sociedade diante dos nossos olhos.
             <br /><br />
             A medicina regenerativa fará o mesmo com a prática médica.
           </p>
@@ -41,7 +39,7 @@ export default function Urgency() {
               <Zap size={28} color="var(--color-cta)" />
             </div>
             <h3 style={{ fontSize: '2rem', fontWeight: 400, marginBottom: '0.5rem' }}>Relevância</h3>
-            <p className="text-muted" style={{ fontSize: '1.05rem' }}>Atualizar-se em medicina regenerativa não será opção, mas <span style={{ color: 'var(--color-primary)' }}>condição</span> para o médico que deseja manter relevância.</p>
+            <p className="text-muted" style={{ fontSize: '1.05rem' }}>Atualizar-se em medicina regenerativa não será opção, mas condição para o médico que deseja manter relevância.</p>
           </div>
         </div>
       </div>

@@ -19,18 +19,15 @@ export default function FinalCTA() {
           </p>
 
           <p style={{ fontSize: '1.05rem', fontWeight: 400, marginBottom: '4rem', maxWidth: '700px', margin: '0 auto 4rem', color: 'var(--text-main)' }}>
-            base científica séria, tradução clínica, regulação, direção de mercado e conexão com quem já ocupa a fronteira da medicina regenerativa.
+            Base científica séria, tradução clínica, regulação, direção de mercado e conexão com quem já ocupa a fronteira da medicina regenerativa.
           </p>
 
           <div className="glass card-hover final-cta-card" style={{ borderRadius: '2px', marginBottom: '2rem', border: '1px solid var(--border-medium)', background: 'rgb(13 20 35)' }}>
             <p style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: '1rem', color: 'var(--text-main)' }}>
               A próxima grande distinção da prática médica já está em andamento.
             </p>
-            <p className="text-muted" style={{ marginBottom: '2.5rem', fontSize: '1.05rem' }}>
-              E ela reorganiza valor, demanda e autoridade.
-            </p>
-            <p style={{ fontSize: '1.4rem', fontWeight: 400, marginBottom: '3rem' }}>
-              Garantir lugar no REGENCON é <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>garantir lugar na elite</span> da medicina regenerativa.
+            <p className="text-muted" style={{ marginBottom: '3.5rem', fontSize: '1.05rem' }}>
+              E ela reorganiza valor, demanda e autoridade. Garantir lugar no REGENCON é garantir lugar na elite da medicina regenerativa.
             </p>
 
             {/* Logos */}

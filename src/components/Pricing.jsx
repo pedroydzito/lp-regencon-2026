@@ -52,7 +52,7 @@ export default function Pricing() {
               position: 'relative',
               transform: plan.highlight ? 'translateY(-10px)' : 'translateY(0)',
               border: plan.highlight ? '1px solid var(--text-main)' : '1px solid var(--border-medium)',
-              background: plan.highlight ? 'var(--bg-card-dark)' : 'var(--bg-card-dark)',
+              background: (plan.name === 'Start' || plan.name === 'Expert') ? '#111312' : 'var(--bg-card-dark)',
               zIndex: plan.highlight ? 10 : 1,
               opacity: plan.soldOut ? 0.6 : 1,
             }}>
@@ -122,7 +122,7 @@ export default function Pricing() {
             onMouseEnter={(e) => e.currentTarget.style.color = 'var(--text-main)'}
             onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
           >
-            Fale com um gerente de relacionamento e verifique elegibilidade
+            Fale com um gerente de relacionamento e verifique sua elegibilidade para uma condição especial.
           </button>
         </div>
       </div>

@@ -121,13 +121,16 @@ export default function Speakers() {
               Reunimos mais de 20 palestrantes que atuam na vanguarda da medicina regenerativa e da longevidade. Aprenda diretamente com pioneiros em protocolos de terapias regenerativas.
             </p>
             <p style={{ fontSize: '1.05rem', maxWidth: '750px', margin: '0 auto', fontWeight: 400, color: 'var(--text-main)' }}>
-              Conecte-se com médicos, cientistas, fundadores e investidores que já estão moldando uma economia da longevidade na casa dos trilhões de dólares. <span style={{ color: 'var(--color-primary)' }}>Transforme a sua trajetória em dois dias.</span>
+              Conecte-se com médicos, cientistas, fundadores e investidores que já estão moldando uma economia da longevidade na casa dos trilhões de dólares. <span style={{ color: 'var(--color-primary)' }}>Transforme a sua trajetória em dois dias no congresso que marca um novo momento para a prática médica no Brasil.</span>
             </p>
           </div>
 
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <img src="/Regencon.svg" alt="REGENCON" style={{ height: '40px', margin: '0 auto', opacity: 0.8 }} />
             <p className="text-muted" style={{ fontSize: '1.05rem', marginTop: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Onde a ciência encontra a prática</p>
+            <h3 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', marginTop: '2rem', fontWeight: 400 }}>
+              Nossos <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>palestrantes</span>
+            </h3>
           </div>
         </div>
 

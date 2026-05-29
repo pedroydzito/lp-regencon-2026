@@ -11,25 +11,25 @@ export default function Benefits() {
     },
     {
       title: "Tradução Científica",
-      desc: "Tradução da ciência de fronteira para a prática clínica do dia a dia",
+      desc: "Tradução da ciência para a prática clínica",
       category: "Prática Clínica",
       number: "02"
     },
     {
       title: "Regulação Responsável",
-      desc: "Regulação, evidência e direcionamento responsável e ético",
+      desc: "Regulação, evidência e direcionamento responsável",
       category: "Ética e Legislação",
       number: "03"
     },
     {
       title: "Estratégia de Mercado",
-      desc: "Leitura de mercado e posicionamento médico diferenciado",
+      desc: "Leitura de mercado e posicionamento médico",
       category: "Negócios e Carreira",
       number: "04"
     },
     {
       title: "Acesso à Elite",
-      desc: "Contato direto com quem conduz a fronteira científica global",
+      desc: "Contato direto com quem conduz a fronteira científica",
       category: "Conexão e Networking",
       number: "05"
     }
@@ -77,42 +77,43 @@ export default function Benefits() {
       <section className="section" style={{ position: 'relative', background: '#111312' }}>
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '850px', margin: '0 auto 4rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '5rem', maxWidth: '850px', margin: '0 auto 5rem' }}>
             <div className="eyebrow" style={{ justifyContent: 'center' }}>Legitimidade</div>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', fontWeight: 400 }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '2.5rem', fontWeight: 400 }}>
               No REGENCON, o médico ganha <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>legitimidade</span> para atuar
             </h2>
+            
+            {/* Logos positioned above the description */}
+            <div className="benefits-logos" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+              {[
+                { src: "/Instituições/LOGO_USP.png", alt: "USP", height: '32px' },
+                { src: "/Instituições/LOGO_STANFORD.png", alt: "Stanford", height: '28px' },
+                { src: "/Instituições/LOGO_DUKE.png", alt: "Duke", height: '32px' },
+                { src: "/Instituições/LOGO_INCOR.png", alt: "InCor", height: '32px' },
+                { src: "/Instituições/LOGO_ANVISA.png", alt: "ANVISA", height: '28px' },
+                { src: "/Instituições/Associacao de Orgaos.png", alt: "Associação de Órgãos", height: '32px' }
+              ].map((logo, i) => (
+                <img 
+                  key={i} 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  style={{ 
+                    height: logo.height, 
+                    maxWidth: '120px', 
+                    objectFit: 'contain', 
+                    filter: 'brightness(0) invert(1)', 
+                    opacity: 0.5,
+                    transition: 'opacity 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
+                  onMouseLeave={(e) => e.currentTarget.style.opacity = '0.5'}
+                />
+              ))}
+            </div>
+
             <p className="text-muted leading-relaxed" style={{ fontSize: '1.05rem' }}>
               Base científica séria, tradução clínica, regulação e leitura de mercado em um dos campos mais promissores da medicina moderna. Não se trata de assistir a palestras. Trata-se de compreender o movimento que já está transformando a medicina e ocupar posição com segurança.
             </p>
-          </div>
-
-          {/* Logos */}
-          <div className="benefits-logos" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', marginBottom: '5rem' }}>
-            {[
-              { src: "/Instituições/LOGO_USP.png", alt: "USP", height: '32px' },
-              { src: "/Instituições/LOGO_STANFORD.png", alt: "Stanford", height: '28px' },
-              { src: "/Instituições/LOGO_DUKE.png", alt: "Duke", height: '32px' },
-              { src: "/Instituições/LOGO_INCOR.png", alt: "InCor", height: '32px' },
-              { src: "/Instituições/LOGO_ANVISA.png", alt: "ANVISA", height: '28px' },
-              { src: "/Instituições/Associacao de Orgaos.png", alt: "Associação de Órgãos", height: '32px' }
-            ].map((logo, i) => (
-              <img 
-                key={i} 
-                src={logo.src} 
-                alt={logo.alt} 
-                style={{ 
-                  height: logo.height, 
-                  maxWidth: '120px', 
-                  objectFit: 'contain', 
-                  filter: 'brightness(0) invert(1)', 
-                  opacity: 0.5,
-                  transition: 'opacity 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '0.5'}
-              />
-            ))}
           </div>
 
           <h3 style={{ fontSize: '1.25rem', marginBottom: '2.5rem', textAlign: 'center', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-secondary)' }}>No REGENCON, você terá acesso a:</h3>
@@ -164,9 +165,9 @@ export default function Benefits() {
 
           {/* CTA Block separated from the grid */}
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto', paddingTop: '1rem' }}>
-            <p className="text-muted" style={{ marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', textAlign: 'center', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-secondary)' }}>
               Tudo isso sob liderança acadêmica do Prof. Dr. Jorge Kalil e com autoridades ligadas a Stanford, Duke, FMUSP, InCor e ANVISA.
-            </p>
+            </h3>
             <p style={{ fontWeight: 400, fontSize: '1.05rem', marginBottom: '2.5rem', color: 'var(--text-main)' }}>
               Pela primeira vez no Brasil, você terá acesso direto aos protocolos, à visão clínica e ao direcionamento científico de centros de referência de nível internacional.
             </p>
