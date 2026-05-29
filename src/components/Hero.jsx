@@ -87,12 +87,12 @@ export default function Hero() {
         <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1000px' }}>
           <img src="/Regencon.svg" alt="REGENCON Logo" className="hero-logo" style={{ height: '60px', margin: '0 auto 2rem', opacity: 0.9 }} />
 
-          <h1 className="text-balance" style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', marginBottom: '1.5rem', fontWeight: 400, lineHeight: 1.05 }}>
-            Moldando o futuro da <span className="gradient-text">longevidade</span> e da medicina regenerativa
+          <h1 className="text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '1.5rem', fontWeight: 400, lineHeight: 1.15 }}>
+            Atualize-se em <span className="gradient-text">medicina regenerativa</span> com segurança. Da ciência à prática clínica e de mercado.
           </h1>
 
-          <p className="hero-subtitle text-muted leading-relaxed text-balance" style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
-            Atualize-se em medicina regenerativa com segurança. Da ciência à prática clínica e de mercado, com autoridades de instituições globais.
+          <p className="hero-subtitle text-muted leading-relaxed text-balance" style={{ fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
+            Moldando o futuro da longevidade e da medicina regenerativa.
           </p>
 
           <div className="hero-info-bar" style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', marginBottom: '3rem', fontSize: '1.1rem', color: '#ffffff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -117,8 +117,8 @@ export default function Hero() {
                   <img key={i} src={src} alt="Idealizador" style={{ width: '36px', height: '36px', borderRadius: '50%', border: '1.5px solid var(--bg-base)', objectFit: 'cover', zIndex: 3-i, position: 'relative', marginLeft: i > 0 ? '-12px' : '0' }} />
                 ))}
               </div>
-              <p className="hero-elite-text" style={{ fontSize: '1.1rem', color: '#A8AAA7', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                Junte-se à elite da medicina
+              <p className="hero-elite-text" style={{ fontSize: '1.1rem', color: '#A8AAA7', letterSpacing: '0.05em' }}>
+                Último lote com condição especial
               </p>
             </div>
           </div>
