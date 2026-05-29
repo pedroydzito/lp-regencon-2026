@@ -69,7 +69,7 @@ export default function Context() {
 
         {/* Brasil Card */}
         <div className="glass card-hover" style={{ 
-          padding: '4rem 3rem', 
+          padding: '2.5rem', 
           borderRadius: '2px', 
           textAlign: 'center', 
           background: 'rgba(15, 18, 18, 0.85)', 
@@ -82,11 +82,11 @@ export default function Context() {
               <h3 style={{ fontSize: '1.25rem', fontWeight: 400, marginBottom: 0, color: 'var(--text-main)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Brasil</h3>
             </div>
 
-            <h3 className="text-balance" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', marginBottom: '1.75rem', fontWeight: 400, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text-main)' }}>
+            <h3 className="text-balance" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', marginBottom: '1.5rem', fontWeight: 400, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text-main)' }}>
               A medicina regenerativa <span style={{ fontStyle: 'italic', color: 'var(--color-primary)' }}>deixou de ser promessa</span>.
             </h3>
             
-            <div className="text-muted leading-relaxed" style={{ fontSize: '1.15rem', maxWidth: '750px', margin: '0 auto 2.5rem', fontWeight: 300, display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div className="text-muted leading-relaxed" style={{ fontSize: '1.05rem', maxWidth: '750px', margin: '0 auto 2.5rem', fontWeight: 300, display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <p>
                 Ela já movimenta pacientes, capital, oferta clínica e reposicionamento médico na nossa região.
               </p>
@@ -104,10 +104,21 @@ export default function Context() {
               </p>
             </div>
 
-            <div style={{ textAlign: 'center' }}>
-              <button className="btn-cta" style={{ textTransform: 'none' }}>
-                Garantir a minha participação <ArrowRight size={18} />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+              <button className="btn-cta">
+                GARANTIR A MINHA PARTICIPAÇÃO <ArrowRight size={18} />
               </button>
+              
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  {["/Palestrantes/Kalil.png", "/Palestrantes/Juliano.png", "/Palestrantes/Claudia Medeiros.jpeg"].map((src, i) => (
+                    <img key={i} src={src} alt="Idealizador" style={{ width: '36px', height: '36px', borderRadius: '50%', border: '1.5px solid var(--bg-base)', objectFit: 'cover', zIndex: 3-i, position: 'relative', marginLeft: i > 0 ? '-12px' : '0' }} />
+                  ))}
+                </div>
+                <p style={{ fontSize: '1.1rem', color: '#A8AAA7', letterSpacing: '0.05em', margin: 0 }}>
+                  Último lote com condição especial
+                </p>
+              </div>
             </div>
           </div>
         </div>
