@@ -87,9 +87,12 @@ export default function Hero() {
         <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1000px' }}>
           <img src="/Regencon.svg" alt="REGENCON Logo" className="hero-logo" style={{ height: '60px', margin: '0 auto 2rem', opacity: 0.9 }} />
 
-          <h1 className="text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '1.5rem', fontWeight: 400, lineHeight: 1.15 }}>
-            Atualize-se em <span className="gradient-text">medicina regenerativa</span> com segurança. Da ciência à prática clínica e de mercado.
+          <h1 className="text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '0.75rem', fontWeight: 400, lineHeight: 1.15 }}>
+            Atualize-se em <span className="gradient-text">medicina regenerativa com segurança</span>.
           </h1>
+          <h2 className="text-balance" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', marginBottom: '1.75rem', fontWeight: 400, lineHeight: 1.2, color: 'var(--text-main)' }}>
+            Da ciência à prática clínica e de mercado.
+          </h2>
 
           <p className="hero-subtitle text-muted leading-relaxed text-balance" style={{ fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
             Moldando o futuro da longevidade e da medicina regenerativa.
